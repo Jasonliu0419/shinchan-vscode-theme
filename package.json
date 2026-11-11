@@ -1,0 +1,80 @@
+{
+  "name": "shinchan-buddy",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@types/mocha": "10.0.10",
+    "@types/node": "22.20.5",
+    "@types/vscode": "1.95.0",
+    "@vitest/coverage-v8": "5.1.0",
+    "@vscode/test-cli": "0.0.15",
+    "@vscode/test-electron": "3.1.0",
+    "@vscode/vsce": "4.1.0",
+    "esbuild": "0.28.2",
+    "mocha": "12.0.3",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0"
+  },
+  "displayName": "蠟筆小新小夥伴",
+  "publisher": "local",
+  "description": "春日部淺色主題與 Explorer 像素小新，個人使用。",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.extension.json --noEmit && tsc -p tsconfig.webview.json --noEmit",
+    "build": "node esbuild.mjs",
+    "build:prod": "node esbuild.mjs --production",
+    "watch": "node esbuild.mjs --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "pretest:integration": "npm run build && tsc -p tsconfig.test.json",
+    "test:integration": "vscode-test",
+    "vscode:prepublish": "npm run typecheck && npm run build:prod",
+    "package": "vsce package --no-dependencies --allow-missing-repository --out shinchan-buddy.vsix",
+    "install:local": "code --install-extension shinchan-buddy.vsix --force",
+    "publish": "node -e \"console.error('Personal extension: publishing is disabled.'); process.exit(1)\""
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "蠟筆小新 春日部",
+        "uiTheme": "vs",
+        "path": "./themes/shinchan-kasukabe-color-theme.json"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "shinchanBuddy.buddyView",
+          "name": "小新小夥伴"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "小新小夥伴",
+      "properties": {
+        "shinchanBuddy.reactToEditorEvents": {
+          "type": "boolean",
+          "default": true,
+          "description": "存檔與錯誤增加時，讓小新說一句話。"
+        }
+      }
+    }
+  }
+}

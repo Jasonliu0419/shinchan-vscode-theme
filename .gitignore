@@ -1,0 +1,11 @@
+node_modules/
+dist/
+out/
+coverage/
+.vscode-test/
+*.vsix
+
+# Copyrighted character artwork (personal use only, do not redistribute)
+*.gif
+*.jpg
+assets/sprites.json
