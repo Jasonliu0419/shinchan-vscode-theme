@@ -220,7 +220,7 @@
         "comment"
       ],
       "settings": {
-        "foreground": "#82756A",
+        "foreground": "#8C8277",
         "fontStyle": "italic"
       }
     },
@@ -231,7 +231,7 @@
         "storage"
       ],
       "settings": {
-        "foreground": "#98554D"
+        "foreground": "#C8261E"
       }
     },
     {
@@ -240,7 +240,7 @@
         "string"
       ],
       "settings": {
-        "foreground": "#586937"
+        "foreground": "#2E7D32"
       }
     },
     {
@@ -252,7 +252,7 @@
         "support.constant"
       ],
       "settings": {
-        "foreground": "#80611E"
+        "foreground": "#966A00"
       }
     },
     {
@@ -262,7 +262,7 @@
         "support.function"
       ],
       "settings": {
-        "foreground": "#466F87"
+        "foreground": "#1E63B8"
       }
     },
     {
@@ -274,7 +274,7 @@
         "support.class"
       ],
       "settings": {
-        "foreground": "#795D85"
+        "foreground": "#8C38B4"
       }
     },
     {
@@ -295,7 +295,7 @@
         "meta.object-literal.key"
       ],
       "settings": {
-        "foreground": "#586773"
+        "foreground": "#00787C"
       }
     },
     {
@@ -305,7 +305,19 @@
         "keyword.operator"
       ],
       "settings": {
-        "foreground": "#756357"
+        "foreground": "#6E625A"
+      }
+    },
+    {
+      "name": "Word operators",
+      "scope": [
+        "keyword.operator.logical.python",
+        "keyword.operator.word",
+        "keyword.operator.expression",
+        "keyword.operator.new"
+      ],
+      "settings": {
+        "foreground": "#C8261E"
       }
     },
     {
@@ -314,7 +326,7 @@
         "entity.name.tag"
       ],
       "settings": {
-        "foreground": "#98554D"
+        "foreground": "#C8261E"
       }
     },
     {
@@ -323,7 +335,7 @@
         "entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": "#80611E"
+        "foreground": "#966A00"
       }
     },
     {
@@ -333,7 +345,7 @@
         "constant.character.escape"
       ],
       "settings": {
-        "foreground": "#92543C"
+        "foreground": "#C0157A"
       }
     },
     {
@@ -354,7 +366,7 @@
         "string.other.link"
       ],
       "settings": {
-        "foreground": "#466F87"
+        "foreground": "#1E63B8"
       }
     },
     {
@@ -390,23 +402,23 @@
   ],
   "semanticTokenColors": {
     "comment": {
-      "foreground": "#82756A",
+      "foreground": "#8C8277",
       "italic": true
     },
-    "keyword": "#98554D",
-    "string": "#586937",
-    "number": "#80611E",
-    "enumMember": "#80611E",
-    "function": "#466F87",
-    "method": "#466F87",
-    "type": "#795D85",
-    "class": "#795D85",
-    "interface": "#795D85",
-    "namespace": "#795D85",
+    "keyword": "#C8261E",
+    "string": "#2E7D32",
+    "number": "#966A00",
+    "enumMember": "#966A00",
+    "function": "#1E63B8",
+    "method": "#1E63B8",
+    "type": "#8C38B4",
+    "class": "#8C38B4",
+    "interface": "#8C38B4",
+    "namespace": "#8C38B4",
     "variable": "#3B3330",
     "parameter": "#3B3330",
-    "property": "#586773",
-    "operator": "#756357",
-    "regexp": "#92543C"
+    "property": "#00787C",
+    "operator": "#6E625A",
+    "regexp": "#C0157A"
   }
 }
